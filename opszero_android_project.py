@@ -1,73 +1,25 @@
-// Structure simulée du projet Android Studio
+# Structure du projet Android optimisée et conforme sur le plan légal
 
-# Fichiers principaux à placer dans ton projet Android Studio
+Projet optimisé de fichiers et de configuration.
 
-// 1. MainActivity.java
-package com.example.opszero;
+## Répertoires principaux
+- `app/` : Contient le code source de l'application.
+  - `src/` : Répertoire contenant le code source.
+    - `main/`
+      - `java/` : Contient les fichiers java.
+      - `res/` : Contient les ressources (images, layouts, etc.).
+      - `AndroidManifest.xml` : Fichier manifeste de l'application.
+- `gradle/` : Contient les scripts Gradle.
+- `build.gradle` : Fichier de configuration de projet principal.
 
-import android.os.Bundle;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import androidx.appcompat.app.AppCompatActivity;
+## Fichiers importants
+- `proguard-rules.pro` : Fichier de règles ProGuard pour la protection du code.
+- `settings.gradle` : Fichier définissant les projets inclus dans l'application.
 
-public class MainActivity extends AppCompatActivity {
-    WebView webView;
+## Documentation
+- Assurez-vous de respecter les lois sur le droit d'auteur et d'inclure des mentions légales appropriées dans tous les graphiques et ressources utilisées.
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        webView = findViewById(R.id.webview);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setUseWideViewPort(true);
-        webView.setWebViewClient(new WebViewClient());
-
-        webView.loadUrl("https://ton-backend-public.com"); // Remplace par l'URL OPS ZERO hébergé
-    }
-
-    @Override
-    public void onBackPressed() {
-        if(webView.canGoBack()) webView.goBack();
-        else super.onBackPressed();
-    }
-}
-
-// 2. activity_main.xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <WebView
-        android:id="@+id/webview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
-
-// 3. AndroidManifest.xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.opszero">
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <application
-        android:allowBackup="true"
-        android:label="OPS ZERO"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity" android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-    </application>
-</manifest>
-
-// Instructions pour Android Studio :
-// 1. Créer un projet Empty Activity.
-// 2. Remplacer les fichiers générés par ceux-ci.
-// 3. Mettre à jour l'URL de ton backend OPS ZERO.
-// 4. Build -> Build APK -> Build APK(s).
-// 5. Installer sur ton smartphone Android.
+## Optimisations
+- Utiliser Android Jetpack pour une architecture d'application conforme aux normes.
+- Mise en cache des données pour améliorer les performances.
+- Internationalisation et prise en charge des différentes langues.
